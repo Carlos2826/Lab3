@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/primerCalc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mi primera super calculadora"
+            android:textSize="35dp"
+            android:textAlignment="center"
+            android:padding="20dp"/>
+
+        <TextView
+            android:id="@+id/primNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Introduzca el primer numero"
+            android:textSize="20dp"
+            android:layout_below="@+id/primerCalc"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNum1"
+            android:layout_below="@+id/primNum"/>
+
+        <TextView
+            android:id="@+id/segNum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Introduzca el segundo numero"
+            android:textSize="20dp"
+            android:layout_below="@+id/txtNum1"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtNum2"
+            android:layout_below="@+id/segNum"/>
+
+        <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/rbgOper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/txtNum2">
+                <RadioButton
+                    android:id="@+id/rbtSuma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Suma"
+                    android:textSize="20dp"
+                    android:onClick="CalcularValor"/>
+                <RadioButton
+                    android:id="@+id/rbtResta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Resta"
+                    android:textSize="20dp"
+                    android:onClick="CalcularValor"/>
+                <RadioButton
+                    android:id="@+id/rbtMult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Multiplicacion"
+                    android:textSize="20dp"
+                    android:onClick="CalcularValor"/>
+                <RadioButton
+                    android:id="@+id/rbtDiv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Division"
+                    android:textSize="20dp"
+                    android:onClick="CalcularValor"/>
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/signoIgual"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/rbgOper"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblResultado"
+            android:textSize="20dp"
+            android:text="Resultado"
+            android:layout_below="@id/signoIgual"/>
+        <CheckBox
+            android:id="@+id/chkBox"
+            android:layout_below="@+id/lblResultado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mostrar resultado en un Dialog"
+            android:textSize="15dp"/>
+
+
+</RelativeLayout>
